@@ -1,0 +1,12 @@
+Author - Barun Halder
+Date - January, 2016
+
+Compile assembly -
+nasm <filename> -b bin -o <filename>.bin
+
+Compile First C kernel -
+gcc -ffreestanding -c kernel.c -o kernel.o
+ld -o kernel.bin -Ttext 0x1000 kernel.o --oformat binary
+
+Create a binary with the bootsector and kernel -
+cat <bootsector>.bin <kernel>.bin > os-image
