@@ -19,7 +19,7 @@
 
 %include "read_disk_3.asm"
 
-BOOT_DRIVE : db 0
+BOOT_DRIVE : db 2
 
 ; Padding
 times 510-($-$$) db 0
